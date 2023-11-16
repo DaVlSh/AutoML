@@ -1,0 +1,11 @@
+stages:
+  get-features:
+    cmd: python3 scripts/data_processing/data_edit.py data/raw/time_series_60min_singleindex.csv  scripts/data_processing/function_defs.py scripts/training/learning.py scripts/tests/training.py
+    deps:
+    - data/raw/time_series_60min_singleindex.csv
+    - scripts/data_processing/data_edit.py
+    - scripts/data_processing/function_defs.py
+    - scripts/training/learning.py
+    - scripts/tests/training.py
+    outs:
+    - data/baseline
